@@ -1,5 +1,6 @@
 (ns reddit-spark.core
   (:require [clojure.string :as string]
+            [reddit-spark.stemmer :as stemmer]
             [flambo.conf :as fconf]
             [flambo.api :as f]
             [flambo.tuple :as ft]
@@ -35,7 +36,7 @@
     (let [ssc (s/streaming-context spark-context 100)]
       (-> (read-from-kafka ssc)
           (s/map (memfn _2))
-          (s/flat-map #(string/split % #" "))
+          (s/flat-map stemmer/stem-string)
           (.countByValue)
           (s/foreach-rdd
            (fn [rdd time]

@@ -6,7 +6,9 @@
                  [org.apache.spark/spark-streaming_2.10 "1.5.2"]
                  [org.apache.spark/spark-streaming-flume_2.10 "1.5.2"]
                  [org.apache.spark/spark-streaming-kafka_2.10 "1.5.2"]
-                 [com.taoensso/carmine "2.12.0"]]
+                 [com.taoensso/carmine "2.12.0"]
+                 [org.apache.lucene/lucene-core "5.3.1"]
+                 [org.apache.lucene/lucene-analyzers-common "5.3.1"]]
   :main reddit-spark.core
   :profiles {:provided {:dependencies [[org.apache.spark/spark-core_2.10 "1.5.2"]
                                        [org.apache.hadoop/hadoop-common "2.6.0"]]}
