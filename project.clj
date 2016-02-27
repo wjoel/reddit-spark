@@ -1,6 +1,8 @@
 (defproject com.joelwilsson/reddit-spark "0.1.0-SNAPSHOT"
   :description "Consume reddit titles from Kafka with Spark"
-  :dependencies [[org.clojure/clojure "1.7.0"]
+  :url "https://github.com/wjoel/reddit-spark"
+  :license {:name "BSD 3-clause"
+            :url "http://opensource.org/licenses/BSD-3-Clause"}
                  [yieldbot/flambo "0.7.1"]
                  [clj-kafka "0.3.3"]
                  [org.apache.spark/spark-streaming_2.10 "1.5.2"]
