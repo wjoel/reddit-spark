@@ -1,11 +1,11 @@
-(ns reddit-spark.core
+(ns com.wjoel.reddit-spark.core
   (:require [clojure.string :as string]
-            [reddit-spark.stemmer :as stemmer]
             [flambo.conf :as fconf]
             [flambo.api :as f]
             [flambo.streaming :as s]
             [taoensso.carmine :as redis :refer [wcar]]
-            [reddit-spark.arguments :as args])
+            [com.wjoel.reddit-spark.arguments :as args]
+            [com.wjoel.reddit-spark.stemmer :as stemmer])
   (:gen-class))
 
 (set! *warn-on-reflection* true)

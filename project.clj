@@ -14,7 +14,7 @@
                  [com.taoensso/carmine "2.12.0"]
                  [org.apache.lucene/lucene-core "5.3.1"]
                  [org.apache.lucene/lucene-analyzers-common "5.3.1"]]
-  :main reddit-spark.core
+  :main ^:skip-aot com.wjoel.reddit-spark.core
   :profiles {:provided {:dependencies [[org.apache.spark/spark-core_2.11 "1.6.0"]
                                        [org.apache.hadoop/hadoop-common "2.6.0"]]}
              :dev {:aot [reddit-spark.core]}

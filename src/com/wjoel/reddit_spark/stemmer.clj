@@ -1,4 +1,4 @@
-(ns reddit-spark.stemmer
+(ns com.wjoel.reddit-spark.stemmer
   (:import (java.io BufferedReader StringReader)
            (org.apache.lucene.analysis.en EnglishAnalyzer
                                           EnglishPossessiveFilter)

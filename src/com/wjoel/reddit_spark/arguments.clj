@@ -1,4 +1,4 @@
-(ns reddit-spark.arguments
+(ns com.wjoel.reddit-spark.arguments
   (:require [clojure.tools.cli :as cli]))
 
 (def cli-options
