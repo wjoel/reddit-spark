@@ -1,14 +1,19 @@
 # reddit-spark
 
-A Clojure library designed to ... well, that part is up to you.
+Parses reddit post messages from a Kafka topic and puts the stemmed
+words of the title into Redis.
 
-## Usage
+## Options
 
-FIXME
+`--redis-host HOST` Redis host name
 
-## License
+`--redis-port PORT` Redis port
 
-Copyright © 2015 FIXME
+`--zookeeper-connect` ZooKeeper connect string
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+## Examples
+
+    $ java -jar target/reddit-spark-0.1.0-SNAPSHOT-standalone.jar
+           --redis-host localhost
+           --redis-port 6379
+           --zookeeper-connect localhost:2181
