@@ -1,18 +1,11 @@
 (ns reddit-spark.stemmer
-  (:require [clojure.java.io :as io]
-            [clojure.string :as string])
   (:import (java.io BufferedReader StringReader)
-           (org.apache.lucene.analysis Tokenizer
-                                       TokenStream)
            (org.apache.lucene.analysis.en EnglishAnalyzer
-                                          EnglishMinimalStemmer
                                           EnglishPossessiveFilter)
            (org.apache.lucene.analysis.core LowerCaseFilter
                                             StopFilter
                                             StopAnalyzer)
-           (org.apache.lucene.analysis.standard StandardFilter)
-           (org.apache.lucene.analysis.en PorterStemFilter
-                                          EnglishMinimalStemFilter)
+           (org.apache.lucene.analysis.en PorterStemFilter)
            (org.apache.lucene.analysis.tokenattributes CharTermAttribute)))
 
 (defn stem-string [string]

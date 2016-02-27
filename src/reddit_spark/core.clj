@@ -3,8 +3,6 @@
             [reddit-spark.stemmer :as stemmer]
             [flambo.conf :as fconf]
             [flambo.api :as f]
-            [flambo.tuple :as ft]
-            [flambo.function :as ffn]
             [flambo.streaming :as s]
             [taoensso.carmine :as redis :refer [wcar]])
   (:gen-class))
